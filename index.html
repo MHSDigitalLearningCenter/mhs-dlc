@@ -1,41 +1,105 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>MHS Digital Learning Center. Millburn Highschool</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">MHS Digital Learning Center</h1>
-      <h2 class="project-tagline"></h2>
-    </section>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Montserrat", sans-serif; font-weight: bold}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+<body>
 
-    <section class="main-content">
-      <h2>
-<a id="-math" class="anchor" href="#-math" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Math</h2>
+<!-- Sidenav -->
+<nav class="w3-sidenav w3-black w3-card-2 w3-animate-top w3-center w3-xxlarge" style="display:none;padding-top:150px" id="mySidenav">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-jumbo w3-right w3-display-topright" style="padding:6px 24px">
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="javascript:void(0)" class="w3-text-grey w3-hover-black">About</a>
+  <a href="javascript:void(0)" class="w3-text-grey w3-hover-black">Photos</a>
+  <a href="javascript:void(0)" class="w3-text-grey w3-hover-black">Shop</a>
+  <a href="javascript:void(0)" class="w3-text-grey w3-hover-black">Contact</a>
+</nav>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare velit odio, vel tempus mauris sagittis quis. In feugiat odio ut porttitor imperdiet. Pellentesque dui nisi, feugiat quis lectus ut, vulputate varius odio. In id ex in dui volutpat feugiat non nec massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus et lacus non accumsan. Nullam eu mauris quam. Morbi sollicitudin tempor eros, nec porttitor purus convallis interdum.</p>
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
 
-<h2>
-<a id="-science" class="anchor" href="#-science" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Science</h2>
+<div class="w3-container w3-padding-32 w3-center w3-opacity w3-margin-bottom">
+  <span class="w3-opennav w3-xxlarge w3-right w3-margin-right" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+  <div class="w3-clear"></div>
+  <h1>PHOTOLIO</h1>
+  <p>A template made by w3.css for photographers.</p>
+  <p class="w3-padding-16"><button class="w3-btn" onclick="myFunction()">Toggle Grid Padding</button></p>
+</div>
 
-<p>Curabitur sagittis eget orci quis placerat. Nulla aliquam enim non nibh pharetra luctus. Aliquam in auctor nulla. In luctus nulla sit amet dolor tincidunt efficitur ac aliquet ligula. Cras at massa ac nulla vulputate consectetur. Nam sollicitudin odio ipsum, sit amet hendrerit lectus accumsan sed. Vestibulum pharetra porttitor nulla at maximus. Nunc hendrerit mauris eros. Nunc semper ipsum mauris. Nunc justo odio, feugiat convallis ante at, ornare volutpat velit. Phasellus consectetur blandit nibh eu vehicula. Vivamus fermentum eleifend diam. Curabitur vestibulum mi odio, sit amet viverra eros tincidunt laoreet. Etiam vel feugiat ipsum.</p>
+<!-- Photo Grid -->
+<div id="myGrid">
+  <div class="w3-third">
+    <img src="img_rocks.jpg" style="width:100%">
+    <img src="img_sound.jpg" style="width:100%">
+    <img src="img_woods.jpg" style="width:100%">
+    <img src="img_rock.jpg" style="width:100%">
+    <img src="img_nature.jpg" style="width:100%">
+    <img src="img_mist.jpg" style="width:100%">
+  </div>
 
-<h2>
-<a id="-computer-science" class="anchor" href="#-computer-science" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Computer Science</h2>
+  <div class="w3-third">
+    <img src="img_coffee.jpg" style="width:100%">
+    <img src="img_bridge.jpg" style="width:100%">
+    <img src="img_notebook.jpg" style="width:100%">
+    <img src="img_london.jpg" style="width:100%">
+    <img src="img_rocks.jpg" style="width:100%">
+    <img src="img_avatar_g.jpg" style="width:100%">
+  </div>
 
-<p>Aenean sit amet eros iaculis, hendrerit orci eget, accumsan ex. Vivamus eget nisi eu lectus sodales pharetra. Praesent ultricies purus vel posuere cursus. Vestibulum sit amet justo auctor, ullamcorper sem quis, molestie tortor. Nulla ultrices semper vulputate. Fusce sagittis est nec suscipit auctor. Integer risus felis, varius ut porta at, ultrices facilisis ex. Ut ac risus vitae erat interdum egestas faucibus in ipsum. Mauris blandit nunc nec interdum molestie. Mauris volutpat, turpis nec finibus venenatis, sapien arcu congue sapien, sit amet aliquam nunc quam eget lacus. Ut eget ullamcorper urna. Aliquam et mi id dolor consequat vestibulum.</p>
+  <div class="w3-third">
+    <img src="img_mist.jpg" style="width:100%">
+    <img src="img_workbench.jpg" style="width:100%">
+    <img src="img_gondol.jpg" style="width:100%">
+    <img src="img_skies.jpg" style="width:100%">
+    <img src="img_lights.jpg" style="width:100%">
+    <img src="img_workshop.jpg" style="width:100%">
+  </div>
+  </div>
+</div>
+<!-- Clear floats -->
+<div class="w3-clear"></div><br><br>
 
-      <footer class="site-footer">
-      </footer>
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-margin-top w3-opacity">
+ <div class="w3-xlarge w3-padding-32">
+   <a href="#" class="w3-hover-text-indigo"><i class="fa fa-facebook-official"></i></a>
+   <a href="#" class="w3-hover-text-red"><i class="fa fa-pinterest-p"></i></a>
+   <a href="#" class="w3-hover-text-light-blue"><i class="fa fa-twitter"></i></a>
+   <a href="#" class="w3-hover-text-grey"><i class="fa fa-flickr"></i></a>
+   <a href="#" class="w3-hover-text-indigo"><i class="fa fa-linkedin"></i></a>
+ </div>
+  <p style="font-weight:normal">Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+ 
+<script>
+// Toggle grid padding
+function myFunction() {
+    var x = document.getElementById("myGrid");
+    if (x.className.indexOf("w3-row-padding") == -1) {
+        x.className += " w3-row-padding";
+    } else {
+        x.className = x.className.replace(" w3-row-padding", "");
+    }
+}
 
-    </section>
+// Open and close sidenav
+function w3_open() {
+    document.getElementById("mySidenav").style.width = "100%";
+    document.getElementById("mySidenav").style.display = "block";
+}
 
-  
-  </body>
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+}
+</script>
+
+</body>
 </html>
