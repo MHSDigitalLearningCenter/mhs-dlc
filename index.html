@@ -17,20 +17,6 @@
   <body>
     
     <section class="page-header">
-      <script src="https://rawgit.com/JulianLaval/canvas-particle-network/master/particle-network.min.js"></script>
-       <div id="particle-canvas"></div>
-    <script type="text/javascript" src="particle-network.min.js"></script>
-    <script type="text/javascript">
-        var particleCanvas = new ParticleNetwork(canvasDiv, options);
-      var options = {
-    particleColor: '#fff',
-    background: '#1a252f',
-    interactive: true,
-    speed: 'fast',
-    density: 'medium'
-};
-var particleCanvas = new ParticleNetwork(document.getElementById('particle-canvas'), options);
-    </script>
       <h1 class="project-name">MHS Digital Learning Center</h1>
        
       <h2 class="project-tagline"></h2>
@@ -38,6 +24,19 @@ var particleCanvas = new ParticleNetwork(document.getElementById('particle-canva
 
     <section class="main-content">
  <style>
+       html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#particle-canvas {
+  width: 100%;
+  height: 100%;
+}
 
    
 button.accordion {
