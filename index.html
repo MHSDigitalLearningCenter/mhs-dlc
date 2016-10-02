@@ -1,60 +1,42 @@
 <!DOCTYPE html>
-<html>
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<style>
-.city {display:none;}
-</style>
-<body>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>MHS Digital Learning Center. Millburn Highschool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">MHS Digital Learning Center</h1>
+      <h2 class="project-tagline"></h2>
+    </section>
 
-<div class="w3-container">
-  <h2>MHS Digital Learning Center</h2>
+    <section class="main-content">
+      <h2>
+<a id="-math" class="anchor" href="#-math" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Math</h2>
 
-  <div class="w3-row">
-    <a href="#" onclick="openCity(event, 'London');">
-      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Math</div>
-    </a>
-    <a href="#" onclick="openCity(event, 'Paris');">
-      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Science</div>
-    </a>
-    <a href="#" onclick="openCity(event, 'Tokyo');">
-      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Compsci</div>
-    </a>
-  </div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare velit odio, vel tempus mauris sagittis quis. In feugiat odio ut porttitor imperdiet. Pellentesque dui nisi, feugiat quis lectus ut, vulputate varius odio. In id ex in dui volutpat feugiat non nec massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus et lacus non accumsan. Nullam eu mauris quam. Morbi sollicitudin tempor eros, nec porttitor purus convallis interdum.</p>
 
-  <div id="London" class="w3-container city">
-    <h2>Math</h2>
-    <p>Math is the capital city of England.</p>
-  </div>
+<h2>
+<a id="-science" class="anchor" href="#-science" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Science</h2>
 
-  <div id="Paris" class="w3-container city">
-    <h2>Paris</h2>
-    <p>Paris is the capital of France.</p>
-  </div>
+<p>Curabitur sagittis eget orci quis placerat. Nulla aliquam enim non nibh pharetra luctus. Aliquam in auctor nulla. In luctus nulla sit amet dolor tincidunt efficitur ac aliquet ligula. Cras at massa ac nulla vulputate consectetur. Nam sollicitudin odio ipsum, sit amet hendrerit lectus accumsan sed. Vestibulum pharetra porttitor nulla at maximus. Nunc hendrerit mauris eros. Nunc semper ipsum mauris. Nunc justo odio, feugiat convallis ante at, ornare volutpat velit. Phasellus consectetur blandit nibh eu vehicula. Vivamus fermentum eleifend diam. Curabitur vestibulum mi odio, sit amet viverra eros tincidunt laoreet. Etiam vel feugiat ipsum.</p>
 
-  <div id="Tokyo" class="w3-container city">
-    <h2>Compsci</h2>
-    <p>Tokyo is the capital of Japan.</p>
-  </div>
-</div>
+<h2>
+<a id="-computer-science" class="anchor" href="#-computer-science" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Computer Science</h2>
 
-<script>
-function openCity(evt, cityName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("city");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-     tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-border-red";
-}
-</script>
+<p>Aenean sit amet eros iaculis, hendrerit orci eget, accumsan ex. Vivamus eget nisi eu lectus sodales pharetra. Praesent ultricies purus vel posuere cursus. Vestibulum sit amet justo auctor, ullamcorper sem quis, molestie tortor. Nulla ultrices semper vulputate. Fusce sagittis est nec suscipit auctor. Integer risus felis, varius ut porta at, ultrices facilisis ex. Ut ac risus vitae erat interdum egestas faucibus in ipsum. Mauris blandit nunc nec interdum molestie. Mauris volutpat, turpis nec finibus venenatis, sapien arcu congue sapien, sit amet aliquam nunc quam eget lacus. Ut eget ullamcorper urna. Aliquam et mi id dolor consequat vestibulum.</p>
 
-</body>
+      <footer class="site-footer">
+      </footer>
+
+    </section>
+
+  
+  </body>
 </html>
 
