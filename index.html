@@ -16,30 +16,81 @@
     </section>
 
     <section class="main-content">
-      <h2>
-<a id="-math" class="anchor" href="#-math" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Math</h2>
+ <style>
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare velit odio, vel tempus mauris sagittis quis. In feugiat odio ut porttitor imperdiet. Pellentesque dui nisi, feugiat quis lectus ut, vulputate varius odio. In id ex in dui volutpat feugiat non nec massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus et lacus non accumsan. Nullam eu mauris quam. Morbi sollicitudin tempor eros, nec porttitor purus convallis interdum.
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/gqsnJxuO4ks" frameborder="0" allowfullscreen></iframe>
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
 
+button.accordion:after {
+    content: '\02795';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
 
-      </p>
-<h2>
-<a id="-science" class="anchor" href="#-science" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Science</h2>
+button.accordion.active:after {
+    content: "\2796";
+}
 
-<p>Curabitur sagittis eget orci quis placerat. Nulla aliquam enim non nibh pharetra luctus. Aliquam in auctor nulla. In luctus nulla sit amet dolor tincidunt efficitur ac aliquet ligula. Cras at massa ac nulla vulputate consectetur. Nam sollicitudin odio ipsum, sit amet hendrerit lectus accumsan sed. Vestibulum pharetra porttitor nulla at maximus. Nunc hendrerit mauris eros. Nunc semper ipsum mauris. Nunc justo odio, feugiat convallis ante at, ornare volutpat velit. Phasellus consectetur blandit nibh eu vehicula. Vivamus fermentum eleifend diam. Curabitur vestibulum mi odio, sit amet viverra eros tincidunt laoreet. Etiam vel feugiat ipsum.</p>
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
 
-<h2>
-<a id="-computer-science" class="anchor" href="#-computer-science" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Computer Science</h2>
+div.panel.show {
+    opacity: 1;
+    max-height: 500px;
+}
+</style>
+</head>
+<body>
 
-<p>Aenean sit amet eros iaculis, hendrerit orci eget, accumsan ex. Vivamus eget nisi eu lectus sodales pharetra. Praesent ultricies purus vel posuere cursus. Vestibulum sit amet justo auctor, ullamcorper sem quis, molestie tortor. Nulla ultrices semper vulputate. Fusce sagittis est nec suscipit auctor. Integer risus felis, varius ut porta at, ultrices facilisis ex. Ut ac risus vitae erat interdum egestas faucibus in ipsum. Mauris blandit nunc nec interdum molestie. Mauris volutpat, turpis nec finibus venenatis, sapien arcu congue sapien, sit amet aliquam nunc quam eget lacus. Ut eget ullamcorper urna. Aliquam et mi id dolor consequat vestibulum.</p>
+<h2>Accordion with symbols</h2>
+<p>In this example we have added a "plus" sign to each button. When the user clicks on the button, the "plus" sign is replaced with a "minus" sign.</p>
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
 
-      <footer class="site-footer">
-      </footer>
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
 
-    </section>
+<button class="accordion">Section 3</button>
+<div id="foo" class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
 
-  
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+</script>
   </body>
 </html>
 
