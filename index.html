@@ -32,6 +32,19 @@
     li.dropdown {
     display: inline-block;
 }
+.parallax {
+    /* The image used */
+    background-image: url('img_parallax.jpg');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .dropdown-content {
     display: none;
@@ -244,6 +257,7 @@ function closeNav() {
 	    
   </header>
 <body>
+	<div class="parallax"></div>
     <!-- Page Content -->
     <div class="container">
 
