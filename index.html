@@ -53,51 +53,134 @@
     display: block;
 }
   
-    
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+nav,
+nav ul {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+nav {
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3);
+  opacity: 0;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+nav ul li {
+  display: table;
+  width: 100%;
+  height: calc(100% /4);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.15);
+  -webkit-perspective: 0px;
+          perspective: 0px;
+  -webkit-transform: rotateX(-90deg) scale(0.5);
+          transform: rotateX(-90deg) scale(0.5);
+  -webkit-transition: all 0.3s ease 0.1s;
+  transition: all 0.3s ease 0.1s;
+}
+nav ul li a {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2.5em;
+  letter-spacing: 0.2em;
+  color: #fff;
+  text-shadow: 0 0 3px rgba(0,0,0,0.3);
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 100;
+}
+nav ul li a:hover {
+  background: rgba(255,255,255,0.1);
+}
+#toggle {
+  display: none;
+}
+#toggle + #toggle-btn,
+.nav-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#toggle + #toggle-btn {
+  height: 40px;
+  width: 40px;
+  z-index: 1000;
+  background: rgba(0,0,0,0.05);
+}
+.nav-icon,
+.nav-icon:before,
+.nav-icon:after {
+  position: absolute;
+  height: 4px;
+  width: 40px;
+  margin: 18px 0;
+  z-index: 10000;
+  border-radius: 3px;
+  background: #fff;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.nav-icon:before {
+  content: "";
+  margin-top: -18px;
+}
+.nav-icon:after {
+  content: "";
+  margin-top: 18px;
+}
+#toggle:checked ~ nav {
+  opacity: 1;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+#toggle:checked ~ .nav-icon {
+  background: rgba(255,0,0,0);
+}
+#toggle:checked ~ .nav-icon:before {
+  -webkit-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+  margin-top: 0;
+}
+#toggle:checked ~ .nav-icon:after {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  margin-top: 0;
+}
+#toggle:checked ~ nav ul li {
+  -webkit-transform: rotateY(0deg) scale(1);
+          transform: rotateY(0deg) scale(1);
+}
+
+
  </style>
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">MHS-DLC</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-      
-                   <li class="dropdown">
-                          <a href="javascript:void(0)" class="dropbtn">Subjects</a>
-                            <div class="dropdown-content">
-                                <a href="#">Link 1</a>
-                                 <a href="#">Link 2</a>
-                                    <a href="#">Link 3</a>
-                              </div>
-                      </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
+    <header>
+  <input type="checkbox" id="toggle"/>
+  <label for="toggle" id="toggle-btn"></label>
+  <div class="nav-icon"></div>
+  <nav data-state="close">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
     <!-- Page Content -->
     <div class="container">
 
