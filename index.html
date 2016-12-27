@@ -17,7 +17,11 @@
     <!-- Custom CSS -->
     <link href="css/2-col-portfolio.css" rel="stylesheet">
     
-	
+	  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,205 +30,31 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 <style>
-    .active {
-    background-color: #4CAF50;
-}
-    li.dropdown {
-    display: inline-block;
-}
-.parallax {
-    /* The image used */
-    background-image: url('..BlurredBack.jpg');
+	.navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
 
-    /* Full height */
-    height: 100%; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-  
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
-}
-
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-nav,
-nav ul {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-}
-nav {
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3);
-  opacity: 0;
-  -webkit-transform: scale(0.3);
-          transform: scale(0.3);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-}
-nav ul li {
-  display: table;
-  width: 100%;
-  height: calc(100% /4);
-  border-bottom: 1px solid rgba(255,255,255,0.3);
-  background: rgba(255,255,255,0.15);
-  -webkit-perspective: 0px;
-          perspective: 0px;
-  -webkit-transform: rotateX(-90deg) scale(0.5);
-          transform: rotateX(-90deg) scale(0.5);
-  -webkit-transition: all 0.3s ease 0.1s;
-  transition: all 0.3s ease 0.1s;
-}
-nav ul li a {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  text-decoration: none;
-  font-size: 2.5em;
-  letter-spacing: 0.2em;
-  color: #fff;
-  text-shadow: 0 0 3px rgba(0,0,0,0.3);
-  font-family: 'Helvetica', sans-serif;
-  font-weight: 100;
-}
-nav ul li a:hover {
-  background: rgba(255,255,255,0.1);
-}
-#toggle {
-  display: none;
-}
-#toggle + #toggle-btn,
-.nav-icon {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  border-radius: 3px;
-  cursor: pointer;
-}
-#toggle + #toggle-btn {
-  height: 40px;
-  width: 40px;
-  z-index: 1000;
-  background: rgba(0,0,0,0.05);
-}
-.nav-icon,
-.nav-icon:before,
-.nav-icon:after {
-  position: absolute;
-  height: 4px;
-  width: 40px;
-  margin: 18px 0;
-  z-index: 10000;
-  border-radius: 3px;
-  background: #fff;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-}
-.nav-icon:before {
-  content: "";
-  margin-top: -18px;
-}
-.nav-icon:after {
-  content: "";
-  margin-top: 18px;
-}
-#toggle:checked ~ nav {
-  opacity: 1;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-}
-#toggle:checked ~ .nav-icon {
-  background: rgba(255,0,0,0);
-}
-#toggle:checked ~ .nav-icon:before {
-  -webkit-transform: rotate(-225deg);
-          transform: rotate(-225deg);
-  margin-top: 0;
-}
-#toggle:checked ~ .nav-icon:after {
-  -webkit-transform: rotate(225deg);
-          transform: rotate(225deg);
-  margin-top: 0;
-}
-#toggle:checked ~ nav ul li {
-  -webkit-transform: rotateY(0deg) scale(1);
-          transform: rotateY(0deg) scale(1);
-}
-.bar
-{
-    position: relative;
-    left: 10%;
-}
-
-
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+	
+	
 
  </style>
 </head>
@@ -241,155 +71,101 @@ nav ul li a:hover {
 
 
 
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-    document.body.style.backgroundColor = "white";
-}
-</script>
 	    
   </header>
 <body>
-    <!-- Page Content -->
-    <div class="container">
 
-        <!-- Page Header -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header" align="center" >MHS Digital Learning Center
-                    <small>By Nikki and Vikram Mahendru</small>
-                </h1>
-            </div>
-        </div>
-        <!-- /.row -->
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-6 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://www.desktopimages.org/pictures/2014/0926/1/computer-engineering-science-tech-background-220252.jpg" alt="">
-                </a>
-                <h3>
-                    <a href="#">Mathematicas</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-6 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Two</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-6 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Three</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-6 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Four</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-6 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Five</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-6 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Six</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Pagination -->
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <ul class="pagination">
-                    <li>
-                        <a href="#">&laquo;</a>
-                    </li>
-                    <li class="active">
-                        <a href="#">1</a>
-                    </li>
-                    <li>
-                        <a href="#">2</a>
-                    </li>
-                    <li>
-                        <a href="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#">&raquo;</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
-
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
     </div>
-    <!-- /.container -->
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="https://placehold.it/1200x400?text=IMAGE" alt="Image">
+        <div class="carousel-caption">
+          <h3>Sell $</h3>
+          <p>Money Money.</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="https://placehold.it/1200x400?text=Another Image Maybe" alt="Image">
+        <div class="carousel-caption">
+          <h3>More Sell $</h3>
+          <p>Lorem ipsum...</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+  
+<div class="container text-center">    
+  <h3>What We Do</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+       <a href="http://www.w3.org"> <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image" border="0" /></a>
+      <p>Current Project</p>
+    </div>
+    <div class="col-sm-4"> 
+      <a href="http://www.w3.org"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image" border="0" /></a>
+      <p>Project 2</p>    
+    </div>
+    <div class="col-sm-4">
+       <a href="http://www.w3.org"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image" border="0" /></a>
+      <p>Project 4</p>  
+    </div>
+    
+     <div class="col-sm-4">
+       <a href="http://www.w3.org"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image" border="0" /></a>
+      <p>Project 5</p>  
+    </div>
+    
+    
+  </div>
+</div><br>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+
 
 </body>
 
