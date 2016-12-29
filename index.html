@@ -34,8 +34,11 @@
       margin-bottom: 0;
       border-radius: 0;
     }
-    .no-js #loader { display: none;  }
-		.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+    #spinner{
+	    position: fixed;
+	    top: 50%
+	    left: 50%
+	}
     /* Add a gray background color and some padding to the footer */
     footer {
       background-color: #f2f2f2;
@@ -63,32 +66,24 @@
   background: linear-gradient(to right,rgba(98,169,213,1),rgba(26,43,112,1)); /*Standard*/
 	height: 250px;
 	}
+	.js div#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #333 url('http://files.mimoymima.com/images/loading.gif') no-repeat center center;
+}
 	
 	
 
  </style>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 	
-	
-	<script src="https://github.com/Modernizr/Modernizr/raw/master/modernizr.js"></script>
-	<script>
-		// Wait for window load
-		$(window).load(function() {
-			// Animate loader off screen
-			$("#loader").animate({
-				top: -200
-			}, 1500);
-		});
-	</script>	
 </head>
 
 <body>
-		<img src="http://www.owlhatworld.com/wp-content/uploads/2015/12/38.gif" id="loader">
-
-	
-	
-	
-	
 <header>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -114,6 +109,18 @@
   </div>
 </nav>
 </header>
+	    <div id="preloader"></div>
+
+<script>
+	jQuery(document).ready(function($) {  
+
+// site preloader -- also uncomment the div in the header and the css style for #preloader
+$(window).load(function(){
+	$('#preloader').fadeOut('slow',function(){$(this).remove();});
+});
+
+});
+</script>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
