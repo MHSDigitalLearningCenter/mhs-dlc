@@ -52,7 +52,16 @@
     .carousel-caption {
       display: none; 
     }
-  }
+	}
+	.bannerRep{
+	
+	background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,rgba(98,169,213,1),rgba(26,43,112,1)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(right,rgba(98,169,213,1),rgba(26,43,112,1)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right,rgba(98,169,213,1),rgba(26,43,112,1)); /*Fx 3.6-15*/
+  background: linear-gradient(to right,rgba(98,169,213,1),rgba(26,43,112,1)); /*Standard*/
+	
+	}
 	
 	
 
@@ -141,8 +150,9 @@
     </div>
     
      <div class="col-sm-4">
-       <a href="http://www.w3.org"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image" border="0" /></a>
-      <p>Project 5</p>  
+	    <div class = "bannerRep">
+      <a href="http://www.w3.org"><p>Project 5</p> </a>
+	</div>
     </div>
     
     
